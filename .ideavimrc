@@ -1,0 +1,125 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the Start or end of the window.
+
+let mapleader = "\<Space>"
+"" set easymotion
+Plug 'easymotion/vim-easymotion'
+
+nnoremap <S-u> 3kzz
+nnoremap <S-d> 3jzz
+
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+nnoremap { {zz
+vnoremap { {zz
+nnoremap } }zz
+vnoremap } }zz
+
+
+"" nmap <leader>k :action MethodUp<CR>zz
+"" nmap <leader>j :action MethodDown<CR>zz
+map <leader>k  <Plug>(easymotion-k) <C-c>
+map <leader>j <Plug>(easymotion-j) <C-c>
+
+
+nmap <leader>h :action HideAllWindows<CR>
+nnoremap <leader>7 :action ActivateStructureToolWindow<CR>
+nnoremap <leader>n :action FileStructurePopup<CR>
+"" nnoremap <leader>\ :action ActivateAIAssistantToolWindow<CR>
+nnoremap <leader>g :action AIAssistant.Editor.GenerateCodeInplace<CR>
+
+nnoremap <leader>1 :action GotoHarpoon1<CR>zz
+nnoremap <leader>2 :action GotoHarpoon2<CR>zz
+nnoremap <leader>3 :action GotoHarpoon3<CR>zz
+nnoremap <leader>4 :action GotoHarpoon4<CR>zz
+nnoremap <leader>5 :action GotoHarpoon5<CR>zz
+
+
+
+nnoremap <leader><C-1> :action SetHarpoon1<CR>
+nnoremap <leader><C-2> :action SetHarpoon2<CR>
+nnoremap <leader><C-3> :action SetHarpoon3<CR>
+nnoremap <leader><C-4> :action SetHarpoon4<CR>
+nnoremap <leader><C-5> :action SetHarpoon5<CR>
+
+"" nnoremap <leader>z :action ToggleZenMode<CR> :action ViewStatusBar<CR>
+"" nnoremap <leader>x :action ToggleZenMode<CR>
+
+
+ 
+" Delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+set number
+set relativenumber
+set ignorecase
+set smartcase
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+nnoremap <n> <n>zz
+nnoremap <N> <N>zz
+xnoremap v <Nop>
+
+
+"" complete heresy
+nnoremap `a `a zz
+nnoremap `b `b zz
+nnoremap `c `c zz
+nnoremap `d `d zz
+nnoremap `e `e zz
+nnoremap `f `f zz
+nnoremap `g `g zz
+nnoremap `h `h zz
+nnoremap `i `i zz
+nnoremap `j `j zz
+nnoremap `k `k zz
+nnoremap `l `l zz
+nnoremap `m `m zz
+nnoremap `n `n zz
+nnoremap `o `o zz
+nnoremap `p `p zz
+nnoremap `q `q zz
+nnoremap `r `r zz
+nnoremap `s `s zz
+nnoremap `t `t zz
+nnoremap `u `u zz
+nnoremap `v `v zz
+nnoremap `w `w zz
+nnoremap `x `x zz
+nnoremap `y `y zz
+nnoremap `z `z zz
+
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
